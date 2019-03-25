@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
                     // After 2 Seconds redirect to another intent
                     Intent i=new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(i);
+                    finish();
                 }
                 catch (Exception e) {
 

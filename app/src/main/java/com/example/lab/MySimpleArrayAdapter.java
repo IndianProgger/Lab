@@ -25,11 +25,9 @@ public class MySimpleArrayAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.list, parent, false);
-        TextView textView = (TextView) rowView.findViewById(R.id.label);
-        LinearLayout linearLayout = (LinearLayout) rowView.findViewById(R.id.list1);
+        TextView textView = rowView.findViewById(R.id.label);
+        LinearLayout linearLayout = rowView.findViewById(R.id.list1);
         textView.setText(values[position]);
-        // Изменение иконки для Windows и iPhone
-        String s = values[position];
         if (position%2==0) {
             linearLayout.setBackgroundColor(Color.parseColor("#928E8E"));
         } else {
